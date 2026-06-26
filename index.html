@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صدقة جارية - فتحي الحسيني القطب عوض</title>
+    <style>
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: #f0f4f3; 
+            color: #2c3e50; 
+            text-align: center; 
+            padding: 30px 15px; 
+            margin: 0; 
+        }
+        .container { 
+            background-color: #fff; 
+            max-width: 650px; 
+            margin: 0 auto; 
+            padding: 40px 25px; 
+            border-radius: 25px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
+        }
+        h1 { 
+            color: #1e3d36; 
+            font-size: 36px; 
+            margin-bottom: 5px; 
+            line-height: 1.6;
+            font-weight: bold;
+        }
+        .subtitle { 
+            color: #7f8c8d; 
+            font-size: 22px; 
+            margin-bottom: 35px; 
+        }
+        .counter-box { 
+            background-color: #e8f8f5; 
+            border: 2px solid #a3e4d7; 
+            padding: 30px; 
+            border-radius: 20px; 
+            margin-bottom: 35px; 
+        }
+        .counter-title {
+            font-size: 20px;
+            color: #16a085;
+            margin: 0;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+        .counter-number { 
+            font-size: 72px; 
+            font-weight: bold; 
+            color: #117a65; 
+            margin: 10px 0 0 0;
+            line-height: 1;
+        }
+        .btn-pray { 
+            background-color: #16a085; 
+            color: white; 
+            border: none; 
+            padding: 22px 50px; 
+            font-size: 26px; 
+            font-weight: bold; 
+            border-radius: 50px; 
+            cursor: pointer; 
+            width: 100%; 
+            max-width: 380px; 
+            box-shadow: 0 8px 20px rgba(22, 160, 133, 0.3); 
+            transition: transform 0.1s, background-color 0.2s;
+            margin-bottom: 20px;
+        }
+        .btn-pray:active {
+            transform: scale(0.96);
+        }
+        .dua-section {
+            margin-top: 45px;
+            text-align: right;
+            background: #f9fbfb;
+            padding: 30px;
+            border-radius: 20px;
+            border-right: 6px solid #16a085;
+            box-shadow: inset 0 2px 8px rgba(0,0,0,0.01);
+        }
+        .dua-section h3 {
+            color: #117a65;
+            font-size: 26px;
+            margin-top: 0;
+            margin-bottom: 25px;
+            text-align: center;
+            font-weight: bold;
+            border-bottom: 2px solid #e8f8f5;
+            padding-bottom: 10px;
+        }
+        .dua-card {
+            background-color: #ffffff;
+            padding: 20px;
+            margin-bottom: 18px;
+            border-radius: 12px;
+            border: 1px solid #eaeeed;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+            display: flex;
+            align-items: flex-start;
+        }
+        .dua-icon {
+            font-size: 24px;
+            margin-left: 15px;
+            color: #16a085;
+            margin-top: 2px;
+        }
+        .dua-text { 
+            color: #34495e; 
+            font-size: 21px; 
+            line-height: 1.8; 
+            margin: 0;
+            font-weight: 500;
+        }
+        .dua-card:last-child {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>اللهم اغفر لـ فتحي الحسيني القطب عوض</h1>
+    <p class="subtitle">شاركونا الدعاء له بالرحمة والمغفرة واحتساب الأجر</p>
+
+    <div class="counter-box">
+        <p class="counter-title">إجمالي عدد الأدعية من العائلة</p>
+        <p class="counter-number" id="prayCounter">0</p>
+    </div>
+
+    <button class="btn-pray" onclick="addPrayer()">اضغط هنا واحتسب الدعاء 🤲</button>
+
+    <div class="dua-section">
+        <h3>أدعية مباركة للمتوفى (اقرأ واحتسب)</h3>
+        
+        <!-- الدعاء الأول من الجانب مع أيقونة منسقة -->
+        <div class="dua-card">
+            <span class="dua-icon">✨</span>
+            <p class="dua-text">"اللَّهُمَّ اغْفِرْ لَهُ وَارْحَمْهُ، وَعَافِهِ وَاعْفُ عَنْهُ، وَأَكْرِمْ نُزُلَهُ، وَوَسِّعْ مُدْخَلَهُ، وَاغْسِلْهُ بِالْمَاءِ وَالثَّلْجِ وَالْبَرَدِ، وَنَقِّهِ مِنَ الْخَطَايَا كَمَا نَقَّيْتَ الثَّوبَ الأَبْيَضَ مِنَ الدَّنَسِ."</p>
+        </div>
+
+        <!-- الدعاء الثاني من الجانب -->
+        <div class="dua-card">
+            <span class="dua-icon">✨</span>
+            <p class="dua-text">"اللَّهُمَّ أَبْدِلْهُ دَارًا خَيْرًا مِنْ دَارِهِ، وَأَهْلًا خَيْرًا مِنْ أَهْلِهِ، وَأَدْخِلْهُ الْجَنَّةَ، وَأَعِذْهُ مِنْ عَذَابِ الْقَبْرِ وَمِنْ عَذَابِ النَّارِ، ونوّر له في قبره وافسح له فيه."</p>
+        </div>
+
+        <!-- الدعاء الثالث من الجانب -->
+        <div class="dua-card">
+            <span class="dua-icon">✨</span>
+            <p class="dua-text">"اللَّهُمَّ إن كان محسناً فزد في حسناته، وإن كان مسيئاً فتجاوز عن سيئاته، اللَّهُمَّ ثبته عند السؤال واجعله من أهل الفردوس الأعلى من الجنة بغير حساب ولا سابقة عذاب."</p>
+        </div>
+
+        <!-- الدعاء الرابع من الجانب لتملأ الفراغ بالكامل -->
+        <div class="dua-card">
+            <span class="dua-icon">✨</span>
+            <p class="dua-text">"اللَّهُمَّ انقله من مواطن الدود وضيق اللحود إلى جنات الخلود، واجعله في سدر مخضود، وطلح منضود، وظل ممدود، وماء مسكوب يا أرحم الراحمين."</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    // الحفظ التلقائي والسريع على هاتف كل مستخدم
+    let count = localStorage.getItem('duaCount_fathi_v3_large') ? parseInt(localStorage.getItem('duaCount_fathi_v3_large')) : 0;
+    document.getElementById('prayCounter').innerText = count;
+
+    function addPrayer() {
+        count++;
+        document.getElementById('prayCounter').innerText = count;
+        localStorage.setItem('duaCount_fathi_v3_large', count);
+    }
+</script>
+
+</body>
+</html>
