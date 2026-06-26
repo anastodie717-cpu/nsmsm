@@ -1,0 +1,39 @@
+<div style="text-align: center; padding: 20px; font-family: sans-serif; direction: rtl;">
+    <h1 style="color: #2c3e50;">اللهم اغفر لـ فتحي الحسيني القطب عوض</h1>
+    <p style="color: #7f8c8d; font-size: 18px;">شاركونا الدعاء له بالرحمة والمغفرة</p>
+
+    <div style="background-color: #e8f8f5; padding: 20px; border-radius: 10px; margin: 20px auto; max-width: 300px;">
+        <p style="color: #16a085; margin: 0;">إجمالي أدعية العائلة كلها</p>
+        <h2 style="font-size: 40px; color: #117a65; margin: 10px 0;" id="prayCounter">0</h2>
+    </div>
+
+    <button style="background-color: #16a085; color: white; padding: 15px 30px; font-size: 18px; border: none; border-radius: 25px; cursor: pointer; font-weight: bold;" onclick="addPrayer()">اضغط هنا واحتسب الدعاء</button>
+</div>
+
+<script>
+    // استخدام قاعدة بيانات جديدة ومستقرة تماماً لتخزين العداد على الإنترنت
+    const namespace = "fathi_alhosseini_family";
+    const key = "total_prayers_2026";
+    const apiUrl = `https://counterapi.dev{namespace}/${key}/up`;
+    const getUrl = `https://counterapi.dev{namespace}/${key}`;
+
+    // جلب الرقم الإجمالي المشترك عند فتح الصفحة
+    fetch(getUrl)
+        .then(res => res.json())
+        .then(data => {
+            document.getElementById('prayCounter').innerText = data.count || 0;
+        })
+        .catch(() => {
+            document.getElementById('prayCounter').innerText = 0;
+        });
+
+    function addPrayer() {
+        // زيادة العداد على السيرفر ومزامنته مع باقي العائلة فوراً
+        fetch(apiUrl)
+            .then(res => res.json())
+            .then(data => {
+                document.getElementById('prayCounter').innerText = data.count;
+            })
+            .catch(err => console.log('خطأ في الاتصال بقاعدة البيانات', err));
+    }
+</script>
